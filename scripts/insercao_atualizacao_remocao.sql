@@ -25,4 +25,4 @@ DELETE FROM Consultas WHERE data_hora > '2023-02-10 08:00:00' AND data_hora < '2
 DELETE FROM Pacientes WHERE id IN (SELECT paciente_id FROM Consultas WHERE medico_id = 2);
 
     
-select * from Pacientes;
+select * from Medicos;

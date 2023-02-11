@@ -61,4 +61,4 @@ INSERT INTO Exames (data, descricao, resultados, paciente_id, medico_id) VALUES
 ('2022-12-09', 'Colonoscopia', 'Polipo identificado', 9, 9),
 ('2022-12-10', 'Eletroencefalografia', 'Tudo normal', 10, 10);
 
-select * from Pacientes;
+select * from Medicos;
