@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="../css/style.css">
+        <title>Clinica Médica</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                Clínica Médica
+                <i class='bx bx-plus-medical'></i>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="box pacientes">
+                    <div class="title">
+                        Pacientes
+                        <button type="button" id="criarPaciente" class="openButton"><i class='bx bx-plus'></i></button>
+                    </div>
+                    <div class="list">
+                    </div>
+                </div>
+                <div class="box medicos">
+                    <div class="title">
+                        Médicos
+                        <button type="button" id="criarMedico" class="openButton"><i class='bx bx-plus'></i></button>
+                    </div>
+                    <div class="list">
+                    </div>
+                </div>
+                <div class="box consultas">
+                    <div class="title">
+                        Consultas
+                        <button type="button" id="criarConsulta" class="openButton"><i class='bx bx-plus'></i></button>
+                    </div>
+                    <div class="list">
+                    </div>
+                </div>
+                <div class="box exames">
+                    <div class="title">
+                        Exames
+                        <button type="button" id="criarExame" class="openButton"><i class='bx bx-plus'></i></button>
+                    </div>
+                    <div class="list">
+                    </div>
+                </div>
+                <div class="box receitas">
+                    <div class="title">
+                        Receitas
+                        <button type="button" id="criarReceita" class="openButton"><i class='bx bx-plus'></i></button>
+                    </div>
+                    <div class="list">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="modal">
+            <div class="modalContainer">
+                <div class="modalContent">
+                </div>
+                <div class="options">
+                    <button type="button" class="openButton" id="btnCloseModal"><i class='bx bx-x'></i></button>
+                    <button type="button" class="openButton" id="btnConfirmModal"><i class='bx bx-check'></i></button>
+                </div>
+            </div>
+        </div>
+        <script src="../js/main.js"></script>
+    </body>
+</html>
