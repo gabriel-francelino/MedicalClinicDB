@@ -1,61 +1,61 @@
 -- Exemplos da operação de União
-SELECT data_hora, descricao FROM Consultas
+SELECT data_hora, descricao FROM consultas
 UNION
-SELECT data, descricao FROM Receitas;
+SELECT data, descricao FROM receitas;
 
-SELECT Pacientes.nome, Consultas.descricao
-FROM Pacientes
-JOIN Consultas ON Pacientes.id = Consultas.paciente_id;
+SELECT pacientes.nome, consultas.descricao
+FROM pacientes
+JOIN consultas ON pacientes.id = consultas.paciente_id;
 
-SELECT Pacientes.nome, Exames.resultados
-FROM Pacientes
-JOIN Exames ON Pacientes.id = Exames.paciente_id;
+SELECT pacientes.nome, exames.resultados
+FROM pacientes
+JOIN exames ON pacientes.id = exames.paciente_id;
 
 -- Exemplos da operação Intersecção
-SELECT Medicos.*
-FROM Medicos
-INNER JOIN Receitas
-ON Medicos.id = Receitas.medico_id
+SELECT medicos.*
+FROM medicos
+INNER JOIN receitas
+ON medicos.id = receitas.medico_id
 INTERSECT
-SELECT Medicos.*
-FROM Medicos
-INNER JOIN Exames
-ON Medicos.id = Exames.medico_id;
+SELECT medicos.*
+FROM medicos
+INNER JOIN exames
+ON medicos.id = exames.medico_id;
 
-SELECT Pacientes.nome, Pacientes.telefone
-FROM Pacientes
-INNER JOIN Receitas
-ON Pacientes.id = Receitas.paciente_id
+SELECT pacientes.nome, pacientes.telefone
+FROM pacientes
+INNER JOIN receitas
+ON pacientes.id = receitas.paciente_id
 INTERSECT
-SELECT Pacientes.nome, Pacientes.telefone
-FROM Pacientes
-INNER JOIN Exames
-ON Pacientes.id = Exames.paciente_id;
+SELECT pacientes.nome, pacientes.telefone
+FROM pacientes
+INNER JOIN exames
+ON pacientes.id = exames.paciente_id;
 
-SELECT Consultas.*
-FROM Consultas
-INNER JOIN Receitas
-ON Consultas.paciente_id = Receitas.paciente_id
+SELECT consultas.*
+FROM consultas
+INNER JOIN receitas
+ON consultas.paciente_id = receitas.paciente_id
 INTERSECT
-SELECT Consultas.*
-FROM Consultas
-INNER JOIN Pacientes
-ON Consultas.paciente_id = Pacientes.id;
+SELECT consultas.*
+FROM consultas
+INNER JOIN pacientes
+ON consultas.paciente_id = pacientes.id;
 
 
 -- Exemplos da operação de Diferença
-SELECT Pacientes.nome, Pacientes.telefone
-FROM Pacientes
+SELECT pacientes.nome, pacientes.telefone
+FROM pacientes
 EXCEPT
-SELECT Pacientes.nome, Pacientes.telefone
-FROM Pacientes
-INNER JOIN Exames
-ON Pacientes.id = Exames.paciente_id
-WHERE NOT Exames.resultados = 'Lesão identificada';
+SELECT pacientes.nome, pacientes.telefone
+FROM pacientes
+INNER JOIN exames
+ON pacientes.id = exames.paciente_id
+WHERE NOT exames.resultados = 'Lesão identificada';
 
 SELECT *
-FROM Medicos
+FROM medicos
 EXCEPT
 SELECT *
-FROM Medicos
-WHERE Medicos.especialidade = 'Cardiologista' AND Medicos.especialidade = 'Pediatra';
+FROM medicos
+WHERE medicos.especialidade = 'Cardiologista' AND medicos.especialidade = 'Pediatra';
