@@ -67,6 +67,6 @@ SELECT especialidade
 FROM medicos 
 INNER JOIN consultas ON medicos.id = consultas.medico_id 
 GROUP BY medicos.especialidade 
-HAVING COUNT(consultas.id) >= 2;
+HAVING COUNT(consultas.id) >= 1;
 
 
