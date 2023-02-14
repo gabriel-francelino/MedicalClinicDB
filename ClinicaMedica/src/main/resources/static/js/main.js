@@ -66,7 +66,7 @@ const closeModal = () => {
 const modalDelete = (id, type) => {
     openModal();
     modalContent.innerHTML = `
-        Tem certeza que deseja excluir?
+        <span>Tem certeza que deseja excluir?</span>
     `;
     btnConfirmModal.removeEventListener('click', confirmModal);
     btnConfirmModal.removeAttribute("onclick");

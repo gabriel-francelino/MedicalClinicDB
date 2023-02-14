@@ -318,7 +318,7 @@ main .container .box .list .item .options button {
 /*-------------------------------------------------*/
 
 /* Modal Delete */
-.modal .modalContainer.modalDelete span {
+.modal .modalContainer .modalContent span {
     color: var(--main);
     margin-bottom: 15px;
     font-weight: 900;
