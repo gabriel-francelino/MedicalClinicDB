@@ -1,4 +1,4 @@
-CREATE DATABASE trabalhoBD;
+-- CREATE DATABASE trabalhoBD;
 USE trabalhoBD;
 
 DROP TABLE IF EXISTS pacientes, medicos, consultas, receitas, exames;
