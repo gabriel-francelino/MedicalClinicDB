@@ -1,0 +1,19 @@
+/* -------------------------------------------------------------------------- */
+
+header .container {
+    flex-direction: column;
+}
+header .container span {
+    display: flex;
+    gap: 7px;
+}
+
+main .container {
+    max-width: 728px;
+}
+
+main .container .box {
+    width: 100%;
+}
+
+/*-------------------------------------------------*/

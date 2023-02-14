@@ -42,6 +42,8 @@ const deleteEntity = async (id, type) => {
     } else {
         console.error("Failed to delete");
     }
+    closeModal();
+    location.reload();
 }
 
 // --------------------------------------------------------------------------
@@ -61,6 +63,15 @@ const closeModal = () => {
     document.querySelector(".modal").classList.remove("active");
     document.querySelector(".modalContainer").classList.remove("active");
 }
+const modalDelete = (id, type) => {
+    openModal();
+    modalContent.innerHTML = `
+        Tem certeza que deseja excluir?
+    `;
+    btnConfirmModal.removeEventListener('click', confirmModal);
+    btnConfirmModal.removeAttribute("onclick");
+    btnConfirmModal.setAttribute("onclick", `deleteEntity(${id}, "${type}")`);
+}
 
 // --------------------------------------------------------------------------
 
@@ -77,7 +88,8 @@ const loadPacientes = async () => {
                 ${pacientes[i].nome}
                 <div class="options">
                     <button type="button" class="openButton" onclick="modalEditarPaciente(${pacientes[i].id})"><i class='bx bxs-pencil'></i></button>
-                    <button type="button" class="openButton"><i class='bx bxs-trash'></i></button>
+                    <button type="button" class="openButton" onclick="modalDelete(${pacientes[i].id}, 'pacientes')"><i class='bx bxs-trash'></i></button>
+                    <a href="/historico?index=${pacientes[i].id}"><button type="button" class="openButton"><i class='bx bx-link'></i></button></a>
                 </div>
             </div>
         `;
@@ -186,7 +198,8 @@ const loadMedicos = async () => {
                 ${medicos[i].nome}
                 <div class="options">
                     <button type="button" class="openButton" onclick="modalEditarMedico(${medicos[i].id})"><i class='bx bxs-pencil'></i></button>
-                    <button type="button" class="openButton"><i class='bx bxs-trash'></i></button>
+                    <button type="button" class="openButton" onclick="modalDelete(${medicos[i].id}, 'medicos')"><i class='bx bxs-trash'></i></button>
+                    <a href="/relatorio?index=${medicos[i].id}"><button type="button" class="openButton"><i class='bx bx-link'></i></button></a>
                 </div>
             </div>
         `;
@@ -296,7 +309,7 @@ const loadConsultas = async () => {
                 ${consultas[i].descricao}
                 <div class="options">
                     <button type="button" class="openButton" onclick="modalEditarConsulta(${i})"><i class='bx bxs-pencil'></i></button>
-                    <button type="button" class="openButton"><i class='bx bxs-trash'></i></button>
+                    <button type="button" class="openButton" onclick="modalDelete(${consultas[i].id}, 'consultas')"><i class='bx bxs-trash'></i></button>
                 </div>
             </div>
         `;
@@ -424,7 +437,7 @@ const loadExames = async () => {
                 ${exames[i].descricao}
                 <div class="options">
                     <button type="button" class="openButton" onclick="modalEditarExame(${i})"><i class='bx bxs-pencil'></i></button>
-                    <button type="button" class="openButton"><i class='bx bxs-trash'></i></button>
+                    <button type="button" class="openButton" onclick="modalDelete(${exames[i].id}, 'exames')"><i class='bx bxs-trash'></i></button>
                 </div>
             </div>
         `;
@@ -564,7 +577,7 @@ const loadReceitas = async () => {
                 ${receitas[i].descricao}
                 <div class="options">
                     <button type="button" class="openButton" onclick="modalEditarReceita(${i})"><i class='bx bxs-pencil'></i></button>
-                    <button type="button" class="openButton"><i class='bx bxs-trash'></i></button>
+                    <button type="button" class="openButton" onclick="modalDelete(${receitas[i].id}, 'receitas')"><i class='bx bxs-trash'></i></button>
                 </div>
             </div>
         `;

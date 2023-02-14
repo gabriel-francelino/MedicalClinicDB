@@ -4,9 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class ClinicaController {
-    @GetMapping
-    public String clinica() {
-        return "index";
+public class RelatorioController {
+    // Relatório do médico
+    @GetMapping("/relatorio")
+    public String relatorio() {
+        return "relatorio";
     }
 }
