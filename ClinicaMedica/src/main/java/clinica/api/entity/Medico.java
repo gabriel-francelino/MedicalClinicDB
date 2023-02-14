@@ -7,7 +7,7 @@ import java.sql.Time;
 
 @Data @Getter @Setter @NoArgsConstructor @ToString
 @Entity
-@Table(name = "medicos")
+@Table(name = "Medicos")
 public class Medico {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
