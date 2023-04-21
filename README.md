@@ -19,5 +19,5 @@ Para criar e popular as tabelas você pode utilizar os scripts .SQL na pasta scr
 - [Gabriel Francelino](https://github.com/gabriel-francelino)
 - [Gabriel Piva](https://www.github.com/gpiiva)
 - [Lucas Lima](https://www.github.com/LucasclFerreira)
-- [Gustavo Fidelis](https://www.github.com)
+- [Gustavo Fidelis](https://www.github.com/GustavoFidelisCamilo)
 - [Brandon Afonso](https://www.github.com)
