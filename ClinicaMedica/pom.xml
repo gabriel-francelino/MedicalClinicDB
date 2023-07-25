@@ -14,7 +14,7 @@
 	<name>ClinicaMedica</name>
 	<description>Projeto prático de banco de dados - Clínica Médica</description>
 	<properties>
-		<java.version>19</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

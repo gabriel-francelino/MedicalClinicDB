@@ -6,7 +6,7 @@ Esse projeto representa um sistema de banco de dados de uma clínica médica fic
 
 ## Requisitos para testar
 
-- Java 19
+- Java 17
 - Spring Boot 3
 - MySQL
 
@@ -21,3 +21,21 @@ Para criar e popular as tabelas você pode utilizar os scripts .SQL na pasta scr
 - [Lucas Lima](https://www.github.com/LucasclFerreira)
 - [Gustavo Fidelis](https://www.github.com/GustavoFidelisCamilo)
 - [Brandon Afonso](https://www.github.com)
+
+## Projeto
+
+### Início
+
+![](readme_img/readme_home.png)
+
+### Editar/Cadastrar
+
+![](readme_img/readme_edit_create.png)
+
+### Informações específicas
+
+![](readme_img/readme_info.png)
+
+### Remover
+
+![](readme_img/readme_delete.png)
